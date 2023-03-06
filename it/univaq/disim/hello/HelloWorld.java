@@ -28,7 +28,7 @@ public class HelloWorld {
             goldbach = Integer.parseInt(args[1]);
             
             System.out.printf("il numero %d %s è primo\n", primo, isPrime(primo) ? "" : "non ");
-            System.out.printf("Il numero %d %s verifica la concettura di Goldbach\n", goldbach, goldbach(goldbach) ? "" : "non");
+            System.out.printf("Il numero %d %s verifica la congettura di Goldbach\n", goldbach, goldbach(goldbach) ? "" : "non");
             Duration timeElapsed = Duration.between(inizio, Instant.now());
             System.out.printf("Tempo trascorso: %d millisecondi", timeElapsed.toMillis());
         }
