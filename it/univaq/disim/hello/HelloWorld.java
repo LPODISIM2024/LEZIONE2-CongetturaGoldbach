@@ -3,7 +3,7 @@ package it.univaq.disim.hello;
 import java.time.Duration;
 import java.time.Instant;
 /**
- * La prima classe implementate durante il corso di LPO 22-23
+ * La prima classe implementata durante il corso di LPO 23-24
  * @author Juri Di Rocco
  */
 public class HelloWorld {
@@ -23,14 +23,18 @@ public class HelloWorld {
         if(args.length != 2)
             System.out.printf("il numero di parametri (%d) è errato\n", args.length);
         else {
-            //TODO Possibili errori di casting dovranno essere gestiti.
+            //TODO Possibili errori di casting dovranno essere gestiti. Come???
             primo = Integer.parseInt(args[0]);      
             goldbach = Integer.parseInt(args[1]);
-            
+            if (goldbach % 2 != 0) {
+                System.out.println("Il numero per la congettura di Goldbach deve essere pari");
+                return;
+            }
             System.out.printf("il numero %d %s è primo\n", primo, isPrime(primo) ? "" : "non ");
             System.out.printf("Il numero %d %s verifica la congettura di Goldbach\n", goldbach, goldbach(goldbach) ? "" : "non");
             Duration timeElapsed = Duration.between(inizio, Instant.now());
             System.out.printf("Tempo trascorso: %d millisecondi", timeElapsed.toMillis());
+            System.out.println("Tempo trascorso: "+ timeElapsed.toMillis() + " millisecondi");
         }
     }
     /**
@@ -39,6 +43,7 @@ public class HelloWorld {
      * @return true se il numro è primo
      */
     public static boolean isPrime(int a){
+        //MIGLIORARE IL VALRO DI CONFRONTO CON LA RADICE QUADRATA Math.sqrt(a)
         for(int number = 2; number < Math.sqrt(a);  number++)
             if (a % number == 0)
                 return false; 
