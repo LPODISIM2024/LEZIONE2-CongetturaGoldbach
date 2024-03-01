@@ -23,7 +23,7 @@ public class HelloWorld {
         if(args.length != 2)
             System.out.printf("il numero di parametri (%d) è errato\n", args.length);
         else {
-            //TODO Possibili errori di casting dovranno essere gestiti. Come???
+            //TODO Possibili errori di casting dovranno essere gestiti. Come? Lo vedremo più avanti
             primo = Integer.parseInt(args[0]);      
             goldbach = Integer.parseInt(args[1]);
             if (goldbach % 2 != 0) {
@@ -33,7 +33,8 @@ public class HelloWorld {
             System.out.printf("il numero %d %s è primo\n", primo, isPrime(primo) ? "" : "non ");
             System.out.printf("Il numero %d %s verifica la congettura di Goldbach\n", goldbach, goldbach(goldbach) ? "" : "non");
             Duration timeElapsed = Duration.between(inizio, Instant.now());
-            System.out.printf("Tempo trascorso: %d millisecondi", timeElapsed.toMillis());
+            System.out.printf("Tempo trascorso: %d millisecondi\n", timeElapsed.toMillis());
+            //USANDO System.out.println (Come visto nei corsi del primo semestre)
             System.out.println("Tempo trascorso: "+ timeElapsed.toMillis() + " millisecondi");
         }
     }

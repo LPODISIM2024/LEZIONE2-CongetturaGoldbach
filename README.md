@@ -8,3 +8,10 @@ Scrivere un programma che, dato un numero intero n, verifica che la congettura Ã
 
 ## Per eseguire il programma eseguite
 ```java it.univaq.disim.hello.HelloWorld <numero-primo> <numero-di-goldback-100000>```
+
+### Per generare la documentazione
+```javadoc -d <CARTELLA DI OUTPUT> <Nome del package>```
+
+Per il nostro esempio:
+
+```javadoc -d doc2 it.univaq.disim.hello```
