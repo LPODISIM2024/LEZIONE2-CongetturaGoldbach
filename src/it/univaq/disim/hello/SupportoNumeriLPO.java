@@ -20,6 +20,15 @@ public class SupportoNumeriLPO {
 
 		Instant inizio = Instant.now();
 		// MIGLIORARE IL VALRO DI CONFRONTO CON LA RADICE QUADRATA Math.sqrt(a)
+		if (a <= 1) {
+		    return false;
+		}
+		if (a <= 3) {
+		    return true;
+		}
+		if (a % 2 == 0 || n % 3 == 0) {
+		    return false;
+		}
 		for (int number = 2; number < Math.sqrt(a); number++)
 			if (a % number == 0) {
 				Duration timeElapsed = Duration.between(inizio, Instant.now());
