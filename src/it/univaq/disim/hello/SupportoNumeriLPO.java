@@ -26,7 +26,7 @@ public class SupportoNumeriLPO {
 		if (a <= 3) {
 		    return true;
 		}
-		if (a % 2 == 0 || n % 3 == 0) {
+		if (a % 2 == 0 || a % 3 == 0) {
 		    return false;
 		}
 		for (int number = 2; number < Math.sqrt(a); number++)
